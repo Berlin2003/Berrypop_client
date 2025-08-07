@@ -1,0 +1,166 @@
+.contact-container {
+  padding: 30px 15px;
+  max-width: 900px;
+  margin: 0 auto;
+
+  h1 {
+    text-align: center;
+    color: #ff6384;
+    margin-bottom: 10px;
+  }
+
+  p {
+    text-align: center;
+    color: #a1b0b7;
+    margin-bottom: 20px;
+  }
+}
+
+.contact-header {
+  margin-bottom: 40px;
+}
+
+.contact-form {
+  background: #2b2424;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+
+  .form-group {
+    margin-bottom: 15px;
+
+    label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 5px;
+      color: #a1b0b7;
+    }
+
+    input,
+    textarea {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      font-size: 1rem;
+      background-color: #2b2424;
+      color: #a1b0b7;
+      transition: border-color 0.3s ease;
+
+      &:focus {
+        border-color: #32cd32;
+        outline: none;
+      }
+    }
+
+    textarea {
+      height: 100px;
+      resize: none;
+      background-color: #2b2424;
+    }
+  }
+
+  .submit-btn {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background: #ff6384;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background 0.3s;
+
+    &:hover {
+      background: #ff4a6e;
+    }
+
+    &:disabled {
+      background: #ccc;
+      cursor: not-allowed;
+    }
+  }
+}
+
+.contact-info {
+  margin-top: 40px;
+  text-align: center;
+
+  h2 {
+    color: #a1b0b7;
+    margin-bottom: 10px;
+  }
+
+  a {
+    color: #ff6384;
+    text-decoration: none;
+  }
+}
+
+.success-message {
+  color: green !important;
+  margin-top: 10px;
+  font-weight: bold;
+}
+.error-message{
+  color: rgb(255, 0, 0) !important;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.email-otp-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.email-otp-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.otp-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.otp-wrapper input {
+  flex: 1;
+}
+
+/* Ensuring "Send OTP" and "Verify OTP" buttons are the same size */
+.otp-btn,
+.verify-btn {
+  background-color: #ff6384;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 14px;
+  min-width: 120px;
+  text-align: center;
+}
+
+.otp-btn:disabled,
+.verify-btn:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+/* Resend OTP button style */
+.resend-btn {
+  background: none;
+  border: none;
+  color: rgb(21, 192, 64);
+  text-decoration: underline;
+  cursor: pointer;
+  padding: 0;
+  font-size: inherit;
+}
+
+.resend-btn:hover {
+  text-decoration: underline;
+}

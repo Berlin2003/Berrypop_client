@@ -1,0 +1,138 @@
+.potential-container {
+    padding: 30px 15px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  h1, h2 {
+    font-weight: bold;
+    color: #a1b0b7;
+  }
+  
+  h1 span.brand-name {
+    color: #FF6384;
+  }
+  
+  h2 {
+    font-size: 2.2em;
+    color: #FF6384;
+    margin-top: 30px;
+  }
+  
+  .highlight {
+    font-weight: bold;
+    color: #FF6384;
+  }
+  
+  .potential-intro {
+    background-color: #2b2424;
+    padding: 40px;
+    border-radius: 10px;
+    text-align: center;
+    color: #a1b0b7;
+  }
+  
+  .text-content {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .future-innovations {
+    margin-top: 40px;
+  }
+  
+  .innovation-details {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  
+  .innovation-item {
+    padding: 20px;
+    background-color: #2b2424;
+    border-radius: 8px;
+    width: 30%;
+    text-align: center;
+    color: #a1b0b7;
+  }
+  
+  .innovation-item h3 {
+    color: #FF6384;
+    font-size: 1.4em;
+  }
+  
+  .market-reach, .growth-approach {
+    background-color: #2b2424;
+    padding: 25px;
+    margin-top: 40px;
+    border-radius: 10px;
+    color: #a1b0b7;
+  }
+  
+  .join-us {
+    text-align: center;
+    margin-top: 40px;
+    color: #a1b0b7;
+  }
+  
+  .join-us a {
+    color: #FF6384;
+    font-weight: bold;
+    text-decoration: none;
+  }
+  
+  .join-us a:hover {
+    text-decoration: underline;
+  }
+  /* Responsive Design */
+@media (max-width: 768px) {
+    .innovation-details {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .innovation-item {
+      width: 80%; /* Increase the width for mobile devices */
+      margin-bottom: 20px;
+    }
+  
+    h2 {
+      font-size: 1.8em;
+    }
+  
+    .potential-intro {
+      padding: 30px 15px;
+    }
+  
+    .join-us a {
+      font-size: 1.2em;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .text-content {
+      padding: 15px;
+    }
+  
+    h1 {
+      font-size: 1.8em;
+    }
+  
+    h2 {
+      text-align: center;
+      font-size: 1.6em;
+    }
+  
+    .potential-container {
+      padding: 20px 10px;
+    }
+  
+    .market-reach, .growth-approach, .future-innovations {
+      padding: 20px;
+    }
+  
+    .join-us a {
+      font-size: 1.1em;
+    }
+  }
+  

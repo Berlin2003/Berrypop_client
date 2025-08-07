@@ -1,0 +1,62 @@
+<div class="table-container">
+  <input
+    type="text"
+    class="filter-input"
+    placeholder="Search by name, email, etc."
+    (input)="applyFilter($event)"
+  />
+
+  <table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Message</th>
+        <th>Date</th>
+        <th>Status</th>
+        <th>Payment</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let row of filteredData | slice:(currentPage - 1) * pageSize:(currentPage) * pageSize">
+        <td>{{ row.id }}</td>
+        <td>{{ row.name || 'N/A' }}</td>
+        <td>{{ row.email || 'N/A' }}</td>
+        <td>{{ row.message || 'N/A' }}</td>
+        <td>{{ row.date }}</td>
+
+        <!-- Editable dropdowns -->
+        <td>
+          <select [(ngModel)]="row.status">
+            <option *ngFor="let s of statusOptions" [value]="s">{{ s }}</option>
+          </select>
+        </td>
+        <td>
+          <select [(ngModel)]="row.payment">
+            <option *ngFor="let p of paymentOptions" [value]="p">{{ p }}</option>
+          </select>
+        </td>
+
+        <!-- Save Button -->
+        <td>
+          <button (click)="updateStatusPayment(row)">Save</button>
+          <button (click)="deleteDetails(row.id)">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="pagination">
+    <button (click)="prevPage()" [disabled]="currentPage === 1">Prev</button>
+    <span>Page {{ currentPage }} of {{ totalPages }}</span>
+    <button (click)="nextPage()" [disabled]="currentPage === totalPages">Next</button>
+  </div>
+  <div class="toolbar">
+  <button (click)="logout()">Logout</button>
+</div>
+</div>
+
+
+

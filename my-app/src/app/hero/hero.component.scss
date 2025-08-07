@@ -1,0 +1,67 @@
+.hero-image {
+  position: relative;
+  height: 80vh;
+  background-image: url("/hero_image.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.hero-image::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6); /* Black overlay with 60% opacity */
+  pointer-events: none; /* Ensures the overlay doesn't block interactions */
+}
+
+pre {
+  color: #ffffff; /* Pure white for brightness */
+  font-weight: bold; /* Makes the text bold for better visibility */
+  font-size: 1.5rem; /* Adjust the size for better readability */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); /* Adds a subtle shadow for contrast */
+  position: relative; /* Keeps the text above the overlay */
+  z-index: 1; /* Ensure text appears above the overlay */
+  padding-top: 150px;
+  margin: 0;
+}
+
+.berry {
+  color: #FF6384; /* Strawberry color */
+}
+
+.pop {
+  color: #32CD32; /* Green color */
+}
+
+pre span.remaining-text {
+  color: #a1b0b7;
+}
+
+
+/* Responsive for Tablets */
+@media (max-width: 768px) {
+  .hero-image {
+    height: 60vh; /* Adjust height for smaller screens */
+  }
+
+  pre {
+    font-size: 1.2rem; /* Smaller font size for tablets */
+    padding-top: 120px; /* Adjust padding for better positioning */
+  }
+}
+
+/* Responsive for Mobile */
+@media (max-width: 480px) {
+  .hero-image {
+    height: 50vh; /* Adjust height for mobile screens */
+  }
+
+  pre {
+    font-size: 1rem; /* Even smaller font size for mobile */
+    padding-top: 100px; /* Further adjust padding */
+  }
+}

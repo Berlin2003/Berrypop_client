@@ -1,0 +1,9 @@
+{
+    "/api": {
+      "target": "http://berrypop-env.eba-x6sfhiip.eu-north-1.elasticbeanstalk.com",
+      "secure": false,
+      "changeOrigin": true,
+      "logLevel": "debug"
+    }
+  }
+  

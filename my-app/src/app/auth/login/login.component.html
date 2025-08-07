@@ -1,0 +1,27 @@
+<div class="auth-wrapper">
+  <div class="auth-card">
+    <div class="auth-header">
+      <h3>🍓 BerryPop</h3>
+      <p>Please login to your account</p>
+    </div>
+
+    <form #loginForm="ngForm" (ngSubmit)="onLogin(loginForm)">
+      <input type="email" name="email" ngModel required placeholder="Email Address" />
+      
+   <div class="password-wrapper">
+  <input [type]="showPassword ? 'text' : 'password'" name="password" ngModel required placeholder="Password" />
+  <span class="toggle-password" (click)="showPassword = !showPassword">
+    {{ showPassword ? '🙈' : '👁️' }}
+  </span>
+</div>
+
+
+      <button type="submit">Login</button>
+    </form>
+
+    <p class="auth-footer">
+      Don't have an account?
+      <a (click)="register()">Register</a>
+    </p>
+  </div>
+</div>

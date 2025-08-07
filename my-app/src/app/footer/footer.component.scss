@@ -1,0 +1,25 @@
+.footer {
+    text-align: center;
+    padding: 10px 0;
+    background-color: #2b2424;
+    color: #a1b0b7
+  }
+
+  /* Responsive design */
+  @media (max-width: 768px) {
+    .footer {
+      font-size: 14px; /* Adjust text size for smaller screens */
+    }
+  }
+
+  @media (min-width: 768px) {
+    .footer {
+      font-size: 16px; /* Adjust text size for tablets and larger screens */
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .footer {
+      font-size: 18px; /* Larger text size for desktop */
+    }
+  }

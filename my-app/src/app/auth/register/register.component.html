@@ -1,0 +1,30 @@
+<div class="register-container">
+  <h2>Register</h2>
+  <form [formGroup]="registerForm" (ngSubmit)="register()">
+    <label>Username:</label>
+    <input type="text" formControlName="username" />
+
+    <label>Email:</label>
+    <input type="email" formControlName="email" />
+    <button type="button" (click)="sendOtp()" [disabled]="otpSent">Send OTP</button>
+
+    <div *ngIf="otpSent">
+      <label>Enter OTP:</label>
+      <input type="text" formControlName="otp" />
+      <button type="button" (click)="verifyOtp()" [disabled]="otpVerified">Verify OTP</button>
+    </div>
+
+    <label>Password:</label>
+    <input type="password" formControlName="password" />
+
+    <button type="submit" [disabled]="!otpVerified">Register</button>
+
+    <p style="color: green;" *ngIf="successMsg">{{ successMsg }}</p>
+    <p style="color: red;" *ngIf="errorMsg">{{ errorMsg }}</p>
+  </form>
+
+  <p class="auth-footer">
+    Already have an account?
+    <a (click)="goToLogin()">Login</a>
+  </p>
+</div>

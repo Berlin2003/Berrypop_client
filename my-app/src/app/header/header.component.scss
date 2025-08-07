@@ -1,0 +1,50 @@
+header {
+  display: flex;
+  justify-content: center;  /* Center all the items horizontally */
+  align-items: center;      /* Center the items vertically */
+  gap: 20px;                /* Add space between items */
+  padding: 2px;
+  background-color: #1c1e1f;
+  color: whitesmoke;
+}
+
+.icon {
+  font-size: 1.2rem;
+}
+
+
+
+
+
+.berry {
+  color: #FF6384; /* Strawberry color */
+}
+
+.pop {
+  color: #32CD32; /* Green color */
+}
+a{
+  text-decoration: none;
+  font-size: 1rem;
+  color: #a1b0b7;
+  transition: color 0.3s ease;
+}
+
+.active-link{
+  color: #FF6384;
+}
+
+/* Media query for mobile view */
+@media screen and (max-width: 768px) {
+  .icon {
+    font-size: 1rem;  /* Reduce icon size on mobile */
+  }
+
+  .identity p {
+    font-size: 0.8rem;  /* Reduce Identity font size */
+  }
+
+  .existence p, .potential p ,.contactus p{
+    font-size: 0.8rem;    /* Maintain font size for Existence and Potential */
+  }
+}
