@@ -1,0 +1,12 @@
+{
+  "routes": {
+    "/": {},
+    "/contactus": {},
+    "/dashboard": {},
+    "/home": {},
+    "/identity": {},
+    "/login": {},
+    "/potential": {},
+    "/register": {}
+  }
+}
