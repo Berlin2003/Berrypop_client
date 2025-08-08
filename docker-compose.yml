@@ -10,5 +10,4 @@ services:
     volumes:
       # Mount actual certs from host to container
       - /etc/letsencrypt:/etc/letsencrypt:ro
-      - ./nginx.conf:/etc/nginx/conf.d/default.conf:ro
     restart: always
