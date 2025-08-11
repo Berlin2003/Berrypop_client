@@ -18,11 +18,9 @@ constructor(private authService: AuthService, private router: Router) {}
   onLogin(form: any) {
     if (form.valid) {
       const { email, password } = form.value;
-      console.log('Login form data:', form.value);
 
       this.authService.login(email, password).subscribe({
         next: (token: string) => {
-          console.log('Login successful. Token:', token);
           if(token!== 'fail'){
           localStorage.setItem('token', token); // optional: save token
           // alert(`Welcome, ${email}`);
@@ -33,7 +31,6 @@ constructor(private authService: AuthService, private router: Router) {}
           }
         },
         error: (err: any) => {
-          console.error('Login error:', err);
           alert('Login failed. Please check credentials.');
         }
       });
