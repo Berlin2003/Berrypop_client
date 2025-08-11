@@ -31,6 +31,7 @@ constructor(private authService: AuthService, private router: Router) {}
           }
         },
         error: (err: any) => {
+          console.error('Login error:', err);
           alert('Login failed. Please check credentials.');
         }
       });
