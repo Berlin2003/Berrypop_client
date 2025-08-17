@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://berrypop.info/sitemap.xml
